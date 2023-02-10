@@ -4,6 +4,7 @@ This module contains the representation of the market
 
 import random
 import logging
+logging.root.setLevel(logging.INFO)
 from uuid import uuid4
 
 from src import world
