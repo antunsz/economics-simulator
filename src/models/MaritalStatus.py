@@ -28,3 +28,8 @@ class MaritalStatus:
         if status not in self.STATUS:
             raise ValueError('The allowed status are: {}'.format(self.STATUS.keys()))
 
+    def __str__(self) -> str:
+        return self.status
+
+    def __repr__(self) -> str:
+       return self.__str__()

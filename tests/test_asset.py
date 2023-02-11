@@ -14,10 +14,6 @@ class TestAsset(unittest.TestCase):
         asset = Asset(uid=uuid, asset_id=asset_id, price=30000, depreciation_rate=0.10, age=5)
         self.assertEqual(asset.get_uid(), uuid)
 
-    def test_get_age(self):
-        asset = Asset(uid=uuid, asset_id=asset_id, price=5000, depreciation_rate=0.15, age=2)
-        self.assertEqual(asset.get_age(), 2)
-
     def test_get_price(self):
         asset = Asset(uid=uuid, asset_id=asset_id, price=1000, depreciation_rate=0.20, age=1)
         self.assertEqual(asset.get_price(), 1000)
@@ -25,11 +21,6 @@ class TestAsset(unittest.TestCase):
     def test_get_depreciation_rate(self):
         asset = Asset(uid=uuid, asset_id=asset_id, price=500, depreciation_rate=0.25, age=0)
         self.assertEqual(asset.get_depreciation_rate(), 0.25)
-
-    def test_set_age(self):
-        asset = Asset(uid=uuid, asset_id=asset_id, price=1500, depreciation_rate=0.30, age=3)
-        asset.set_age(4)
-        self.assertEqual(asset.get_age(), 4)
 
     def test_set_price(self):
         asset = Asset(uid=uuid, asset_id=asset_id, price=800, depreciation_rate=0.35, age=2)

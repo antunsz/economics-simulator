@@ -15,8 +15,8 @@ class Position:
         self.position = None
         self.set_position(position)
 
-    def get_position(self) -> str:
-        return self.position
+    def get_position(self) -> dict:
+        return self.POSITIONS[self.position]
 
     def set_position(self, position: str):
         self.__validate_position(position)
@@ -25,13 +25,13 @@ class Position:
         if position not in self.POSITIONS:
             self.POSITIONS[position] = POSITIONS_TEMPLATE[position]
         
-    def get_position_time(self):
+    def get_time(self):
         return self.POSITIONS[self.position]['time']
 
-    def get_position_salary(self):
+    def get_salary(self):
         return self.POSITIONS[self.position]['salary']
 
-    def add_position_time(self, time: int = 1):
+    def add_time(self, time: int = 1):
         self.POSITIONS[self.position]['time'] += time
     
     def __validate_position(self, position):
@@ -39,3 +39,8 @@ class Position:
             raise ValueError(f'{position} not accepted.  The allowed positions are: \
                              {POSITIONS_TEMPLATE.keys()}')
 
+    def __str__(self) -> str:
+        return self.position
+
+    def __repr__(self) -> str:
+         return self.__str__()

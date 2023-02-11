@@ -1,3 +1,3 @@
 from .world import World
 
-world = World()
+_world = World()
