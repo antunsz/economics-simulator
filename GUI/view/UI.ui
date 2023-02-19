@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1312</width>
+    <height>790</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>20</y>
+      <width>73</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Global Time</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>80</y>
+      <width>77</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string># Individuals</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>80</y>
+      <width>53</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string># Assets</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>80</y>
+      <width>75</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string># Purchases</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>110</y>
+      <width>60</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>110</y>
+      <width>60</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>110</y>
+      <width>60</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>20</y>
+      <width>139</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Start Simulation</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>40</y>
+      <width>60</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1312</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuEconomic_Simulator">
+    <property name="title">
+     <string>Economic Simulator</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuIndividuals">
+    <property name="title">
+     <string>Individuals</string>
+    </property>
+    <addaction name="actionSee_all"/>
+   </widget>
+   <widget class="QMenu" name="menuAssets">
+    <property name="title">
+     <string>Assets</string>
+    </property>
+    <addaction name="actionSee_all_2"/>
+   </widget>
+   <widget class="QMenu" name="menuRaces">
+    <property name="title">
+     <string>Races</string>
+    </property>
+    <addaction name="actionSee_all_3"/>
+   </widget>
+   <widget class="QMenu" name="menuMarital_Status">
+    <property name="title">
+     <string>Marital Status</string>
+    </property>
+    <addaction name="actionSee_all_4"/>
+   </widget>
+   <widget class="QMenu" name="menuPositions">
+    <property name="title">
+     <string>Positions</string>
+    </property>
+    <addaction name="actionSee_all_5"/>
+   </widget>
+   <widget class="QMenu" name="menuStudy_Levels">
+    <property name="title">
+     <string>Study Levels</string>
+    </property>
+    <addaction name="actionSee_all_6"/>
+   </widget>
+   <addaction name="menuEconomic_Simulator"/>
+   <addaction name="menuIndividuals"/>
+   <addaction name="menuAssets"/>
+   <addaction name="menuRaces"/>
+   <addaction name="menuMarital_Status"/>
+   <addaction name="menuPositions"/>
+   <addaction name="menuStudy_Levels"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionSee_all">
+   <property name="text">
+    <string>See all</string>
+   </property>
+  </action>
+  <action name="actionSee_all_2">
+   <property name="text">
+    <string>See all</string>
+   </property>
+  </action>
+  <action name="actionSee_all_3">
+   <property name="text">
+    <string>See all</string>
+   </property>
+  </action>
+  <action name="actionSee_all_4">
+   <property name="text">
+    <string>See all</string>
+   </property>
+  </action>
+  <action name="actionSee_all_5">
+   <property name="text">
+    <string>See all</string>
+   </property>
+  </action>
+  <action name="actionSee_all_6">
+   <property name="text">
+    <string>See all</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

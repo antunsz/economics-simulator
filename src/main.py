@@ -10,19 +10,23 @@ sys.path.append('..')
 
 from src.market import Market
 
-market = Market()
+def main(gui=None):
+    market = Market()
 
-for i in tqdm(range(30)):
-    # logging.info(f'world time: {market.world.get_global_time_in_days()}')
-    market.world.reproduce_population()
-    market.create_assets_to_be_available()
-    market.make_individuals_buy_assets()
-    # last_asset = market.world.assets[-1].age if market.world.assets else []
-    # logging.info(f'last asset created: {last_asset}')
-    market.world.next_day()
-    time.sleep(1)
+    for i in tqdm(range(30)):
+        market.world.reproduce_population()
+        market.create_assets_to_be_available()
+        market.make_individuals_buy_assets()
+        market.world.next_day()
+        if gui:
+            gui.label_1.setText(str(market.world.get_global_time_in_days()))
+            gui.label_5.setText(str(len(market.world.individuals)))
+        time.sleep(1)
 
-from IPython import embed; embed()    
+if __name__ == '__main__':
+    logging.basicConfig(level=logging.INFO)
+    main()
+    from IPython import embed; embed()    
 
 
 
